@@ -1,0 +1,45 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed May 20 20:57:07 2026
+| Host         : DESKTOP-K6LVBJO running 64-bit major release  (build 9200)
+| Command      : report_drc -file test_env_drc_opted.rpt -pb test_env_drc_opted.pb -rpx test_env_drc_opted.rpx
+| Design       : test_env
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 1
++-------------+----------+-------------------------------------------------------------+--------+
+| Rule        | Severity | Description                                                 | Checks |
++-------------+----------+-------------------------------------------------------------+--------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1      |
++-------------+----------+-------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT MPG1/pc[15]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+IF1/pc_reg[0], IF1/pc_reg[10], IF1/pc_reg[11], IF1/pc_reg[12],
+IF1/pc_reg[13], IF1/pc_reg[14], IF1/pc_reg[15], IF1/pc_reg[1],
+IF1/pc_reg[2], IF1/pc_reg[3], IF1/pc_reg[4], IF1/pc_reg[5], IF1/pc_reg[6],
+IF1/pc_reg[7], IF1/pc_reg[8] (the first 15 of 16 listed)
+Related violations: <none>
+
+

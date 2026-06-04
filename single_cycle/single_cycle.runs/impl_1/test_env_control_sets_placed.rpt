@@ -1,0 +1,116 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed May 20 20:57:13 2026
+| Host         : DESKTOP-K6LVBJO running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_env_control_sets_placed.rpt
+| Design       : test_env
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    38 |
+|    Minimum number of control sets                        |    38 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    10 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    38 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    37 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             180 |          101 |
+| No           | No                    | Yes                    |              16 |            8 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               2 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+----------------------------+------------------+------------------+----------------+--------------+
+|    Clock Signal    |        Enable Signal       | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+----------------------------+------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG     | MPG1/p_0_in                |                  |                2 |              2 |         1.00 |
+|  MPG1/CLK          |                            | MPG2/AR[0]       |                8 |             16 |         2.00 |
+| ~MemWr_BUFG        |                            |                  |               16 |             16 |         1.00 |
+|  CLK_IBUF_BUFG     |                            |                  |               11 |             36 |         3.27 |
+|  IF1/CLK0_out_BUFG | IF1/RegWr                  |                  |                6 |             48 |         8.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_1      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_3      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_4      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_7      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_2      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_5      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_6      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_8      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_9      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_5      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[8]_0       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[8]_2       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_4      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/MemWr_BUFG_inst_i_1_2 |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_1      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_2      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[8]_1       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_7      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_0      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[9]_3       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/MemWr_BUFG_inst_i_1   |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[9]_1       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[9]_2       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_3      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_6      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[9]_0       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/MemWr_BUFG_inst_i_1_1 |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/MemWr_BUFG_inst_i_1_0 |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_8      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[11]_9      |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[9]_4       |                  |               16 |             64 |         4.00 |
+|  CLK_IBUF_BUFG     | ALU1/ALURes_reg[10]_0      |                  |               16 |             64 |         4.00 |
+|  n_0_304_BUFG      |                            |                  |               74 |            128 |         1.73 |
++--------------------+----------------------------+------------------+------------------+----------------+--------------+
+
+
